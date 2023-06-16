@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Get_Product_sucess, PATCH_PRODUCT_SUCESS, Post_Product_sucess, Product_failure, Product_request } from "./actionType";
+import { DELETE_PRODUCT_SUCCESS, Get_Product_sucess, PATCH_PRODUCT_SUCESS, Post_Product_sucess, Product_failure, Product_request } from "./actionType";
 
 export const URL = "http://localhost:8080/data"
 export const addproduct =(newData)=> (dispatch)=>{
@@ -39,3 +39,18 @@ export const editproduct = (dataobj,id)=>(dispatch)=>{
         dispatch({type:Product_failure})
     })
 }
+
+
+
+export const deleteProduct = (id) => (dispatch) => {
+    dispatch({type:Product_request})
+    return axios
+      .delete(`http://localhost:8080/data/${id}`)
+      .then((res) => {
+        console.log(res.data);
+        dispatch({ tpye: DELETE_PRODUCT_SUCCESS });
+      })
+      .catch((err) => {
+        dispatch({type:Product_failure});
+      });
+  };

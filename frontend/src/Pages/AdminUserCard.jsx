@@ -14,7 +14,7 @@ import {
 import { Navigate, useNavigate, useParams } from 'react-router-dom';
 
 
-const AdminUserCard = ({username,email,password,id}) => {
+const AdminUserCard = ({username,email,password,id,handleDelete}) => {
  console.log(username,email,password,id)
 const navigate = useNavigate()
 
@@ -101,6 +101,7 @@ const navigate = useNavigate()
             justifyContent={'space-between'}
             alignItems={'center'}>
             <Button
+            onClick={()=> {handleDelete(id)}}
               flex={1}
               fontSize={'sm'}
               rounded={'full'}

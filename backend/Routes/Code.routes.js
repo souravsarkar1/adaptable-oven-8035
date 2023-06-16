@@ -1,0 +1,59 @@
+const { Router } = require("express");
+const { CodeModel } = require("../Models/code.model");
+
+
+const codeRouter = Router();
+
+
+codeRouter.post("/upload", async (req, res) => {
+    const userID=req.body.userID ;
+    const userName=req.body.user;
+    const {title,content,language} =req.body;
+    const payload={
+        userID,
+        username:userName,
+        title,
+        content,
+        language
+    }
+    try {
+        const code = new CodeModel(payload);
+        await code.save();
+        res.status(200).json({ message: 'Code Uploaded Sucessfull' })
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+});
+
+codeRouter.get("/getcode",async (req, res) => {
+    try {
+        const data = await CodeModel.find();
+        res.status(200).json({ message: 'Data Get Sucessfull',data })
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+});
+codeRouter.patch("/update/:CodeId",async (req, res) => {
+
+    const {CodeId} = req.params;
+    try {
+        const data = await CodeModel.findByIdAndUpdate({_id:CodeId},req.body);
+        res.status(200).json({ message: 'Code Updated Sucessfull',data })
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+});
+
+codeRouter.delete("/delete/:CodeId",async (req, res) => {
+    const {CodeId} = req.params;
+    try {
+        const data = await CodeModel.findByIdAndDelete({_id:CodeId});
+        res.status(200).json({ message: 'Code Deleted Sucessfull',data })
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+});
+
+
+module.exports = { codeRouter }
+

@@ -1,6 +1,7 @@
 const express = require('express');
 const { connection } = require('./db');
 const { userRoute } = require('./routes/user.routes');
+const { codeRouter } = require('./Routes/Code.routes');
 
 
 require('dotenv').config();
@@ -8,6 +9,7 @@ const app = express();
 app.use(express.json());
 
 app.use('/users', userRoute);
+app.use("/code", codeRouter);
 
 app.listen(process.env.port, async () => {
     try {

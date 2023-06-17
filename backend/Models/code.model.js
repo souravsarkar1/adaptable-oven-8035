@@ -5,7 +5,8 @@ const codeSchema = mongoose.Schema({
     content: { type: String, require: true },
     language: { type: String, require: true },
     username: { type: String, require: true },
-    userID: { type: String, require: true }
+    userID: { type: String, require: true },
+    about : { type: String, require: true }
 }, {
     versionKey: false
 });

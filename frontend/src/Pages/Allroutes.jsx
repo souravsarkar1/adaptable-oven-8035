@@ -6,6 +6,7 @@ import Repogistries from './ProfilePages/Repogistries'
 import Projects from './ProfilePages/Projects'
 import Packages from './ProfilePages/Pakages'
 import EditProfile from './ProfilePages/EditProfile'
+import Codeupload from './Codeupload'
 const Allroutes = () => {
   return (
     <div>
@@ -16,6 +17,7 @@ const Allroutes = () => {
       <Route path = '/projects' element={<Projects/>}/>
       <Route path='/pakages' element={<Packages/>}/>
       <Route path='/editprofile' element={<EditProfile/>}/>
+      <Route path='/code' element={<Codeupload/>}/>
       </Routes>
     </div>
   )

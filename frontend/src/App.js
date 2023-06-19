@@ -12,9 +12,12 @@ function App() {
      <Allroutes/>
      <Footer/> */}
      {/* <Admingetuser/> */}
+     <Navbar/>
      <Allroutes/>
     </div>
   );
 }
+
+
 
 export default App;

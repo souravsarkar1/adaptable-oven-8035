@@ -35,7 +35,7 @@ const Codeupload = () => {
 
   return (
     <div >
-       <div style={{border:"1px solid yellow"}}>
+       <div style={{border:"1px solid yellow",width:"100%"}}>
 
        </div>
        <DIV >
@@ -50,7 +50,10 @@ const Codeupload = () => {
         <Textarea rows="30" cols="80" placeholder='Enter Your Code' name='content' color={"white"} value={payload.content} onChange={handleChange} required></Textarea>
     </div>
        </DIV>
-          <Button onClick={handleUpload} bgColor={"#26a641"} mt={"20px"} color={"white"} _hover={{bgColor:"#39d353"}} >Push The Code</Button>
+       <div width={"100%"}>
+          <Button m={"auto"} w={"150px"}  onClick={handleUpload} bgColor={"#26a641"} mt={"20px"} color={"white"} _hover={{bgColor:"#39d353"}} >Push The Code</Button>
+
+       </div>
     </div>
   )
 }

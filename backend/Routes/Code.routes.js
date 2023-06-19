@@ -11,8 +11,8 @@ codeRouter.post("/upload", async (req, res) => {
     const {title,content,language,about} =req.body;
     const payload={
         userID,
-        owner:userName,
-        title:`${userName}/${title}`,
+        username:userName,
+        title,
         content,
         language,
         about
@@ -31,6 +31,17 @@ codeRouter.get("/getcode",async (req, res) => {
     const userName=req.body.user;
     try {
         const data = await CodeModel.find({userID});
+        res.status(200).json({ message: 'Data Get Sucessfull',data })
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+});
+
+codeRouter.get("/singlecode/:id",async (req, res) => {
+    const {id} = req.params;
+    const userID=req.body.userID ;
+    try {
+        const data = await CodeModel.findOne({userID,_id:id});
         res.status(200).json({ message: 'Data Get Sucessfull',data })
     } catch (error) {
         res.status(400).json({ error: error.message })

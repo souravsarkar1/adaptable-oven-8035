@@ -31,6 +31,8 @@ const Projects = () => {
   return (
 
     <DIV>
+    <br />
+    <br />
       <div className='nvabar'> <ProfilePageNavbar /></div>
       <div className='deteals'>
         <div className='profileDeteals'>
@@ -89,7 +91,7 @@ export default Projects;
 // `
 
 const DIV = styled.div`
-
+ background: white;
 .deteals{
     display: flex;
     /* border: 1px solid red; */

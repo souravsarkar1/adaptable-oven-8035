@@ -1,7 +1,6 @@
 import './App.css';
-import Footer from './Components/Footer';
 import Navbar from './Components/Navbar';
-import Admin from './Pages/Admin';
+
 // import Admingetuser from './Pages/Admingetuser';
 import Allroutes from './Pages/Allroutes';
 

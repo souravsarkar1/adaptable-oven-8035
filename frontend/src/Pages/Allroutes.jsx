@@ -1,5 +1,6 @@
 import React from 'react'
-import {Route, Routes} from 'react-router-dom'
+
+import { Route, Routes } from 'react-router-dom'
 import Home from './Home'
 
 import ProfilePage from './ProfilePages/ProfilePage'
@@ -8,12 +9,15 @@ import Projects from './ProfilePages/Projects'
 import Packages from './ProfilePages/Pakages'
 import EditProfile from './ProfilePages/EditProfile'
 import Codeupload from './Codeupload'
+
+import Admin from './Admin'
 import SingleCode from './SingleCode'
 import Admin from './Admin'
 import EditAdminUser from './EditAdminUser'
 import Admingetuser from './Admingetuser'
 
-const Allroutes = () => {
+
+const AllRoutes = () => {
   return (
     <div>
       <Routes>
@@ -38,6 +42,6 @@ const Allroutes = () => {
       </Routes>
     </div>
   )
-}
+  }
 
-export default Allroutes
+export default AllRoutes

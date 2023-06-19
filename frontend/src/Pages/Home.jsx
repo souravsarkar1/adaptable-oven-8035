@@ -1,13 +1,16 @@
-import { Heading } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import React from 'react'
+
+import Homepart_two from '../Components/Homepart_two'
+import Homepart_one from '../Components/Homepart_one'
+
 
 const Home = () => {
   return (
-    <div>
-  
-    <Heading>Home</Heading>
-     
-    </div>
+    <Box>
+         <Homepart_one/>
+         {/* <Homepart_two/> */}
+    </Box>
   )
 }
 

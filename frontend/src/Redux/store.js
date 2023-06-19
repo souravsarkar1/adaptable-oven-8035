@@ -1,8 +1,7 @@
 import { applyMiddleware, combineReducers, legacy_createStore } from 'redux'
-import thunk from 'redux-thunk'
+import { initialvalue, reducer } from './HomeReducer.jsx/reducer';
 
 
-const rootReducer = combineReducers({
+export const store = legacy_createStore(reducer,initialvalue );
 
-})
-export const store = legacy_createStore(rootReducer, applyMiddleware(thunk));
+console.log(store)

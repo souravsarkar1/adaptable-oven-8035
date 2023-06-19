@@ -1,15 +1,17 @@
+import { Routes,Route } from 'react-router-dom';
 import './App.css';
-import Footer from './Components/Footer';
+
 import Navbar from './Components/Navbar';
-import Allroutes from './Pages/Allroutes';
+
+import { Box } from '@chakra-ui/react';
+import AllRoutes from './Pages/Allroutes';
 
 function App() {
   return (
-    <div className="App">
+    <Box className="App">
      <Navbar/>
-     <Allroutes/>
-     <Footer/>
-    </div>
+    <AllRoutes/>
+    </Box>
   );
 }
 

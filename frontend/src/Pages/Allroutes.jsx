@@ -8,6 +8,7 @@ import Projects from './ProfilePages/Projects'
 import Packages from './ProfilePages/Pakages'
 import EditProfile from './ProfilePages/EditProfile'
 import Codeupload from './Codeupload'
+import SingleCode from './SingleCode'
 
 const Allroutes = () => {
   return (
@@ -21,6 +22,7 @@ const Allroutes = () => {
       <Route path='/pakages' element={<Packages/>}/>
       <Route path='/editprofile' element={<EditProfile/>}/>
       <Route path='/code' element={<Codeupload/>}/>
+      <Route path='/singlecode/:id' element={<SingleCode/>}/>
 
       </Routes>
     </div>

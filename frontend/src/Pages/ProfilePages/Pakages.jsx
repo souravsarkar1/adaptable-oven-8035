@@ -24,6 +24,8 @@ const Packages = () => {
     return (
 
         <DIV>
+        <br />
+        <br />
             <div className='nvabar'> <ProfilePageNavbar /></div>
             <div className='deteals'>
                 <div className='profileDeteals'>
@@ -84,7 +86,7 @@ export default Packages
 // `
 
 const DIV = styled.div`
-
+ background: white;
 .deteals{
     display: flex;
     /* border: 1px solid red; */

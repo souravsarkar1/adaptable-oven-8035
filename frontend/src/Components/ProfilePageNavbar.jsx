@@ -1,52 +1,65 @@
 import { Heading } from '@chakra-ui/react';
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 import { IoBookSharp } from 'react-icons/io5';
-import {AiFillStar , AiFillCodeSandboxCircle} from 'react-icons/ai'
-import {BiRectangle} from 'react-icons/bi'
-import {GoFileDirectory} from 'react-icons/go'
-import { Link } from 'react-router-dom';
+import { AiFillStar, AiFillCodeSandboxCircle } from 'react-icons/ai';
+import { BiRectangle } from 'react-icons/bi';
+import { GoFileDirectory } from 'react-icons/go';
+import { NavLink } from 'react-router-dom';
 
 const ProfilePageNavbar = () => {
   return (
-    <DIV>
-      <Heading as='h5' size='sm' className='Heading'><IoBookSharp style={{marginTop : "3px"}}/><Link to={'/profile'}> OverView</Link></Heading>
-      <Heading as='h5' size='sm' className='Heading'><BiRectangle style={{marginTop : "3px"}}/> <Link to={'/repositories'}>Repositories</Link></Heading>
-      <Heading as='h5' size='sm' className='Heading'><GoFileDirectory style={{marginTop : "3px"}}/> <Link to={'/projects'}>Projects</Link></Heading>
-      <Heading as='h5' size='sm' className='Heading'><AiFillCodeSandboxCircle style={{marginTop : "3px"}}/> <Link to={"/pakages"}>Packages</Link></Heading>
-      <Heading as='h5' size='sm' className='Heading'><AiFillStar style={{marginTop : "3px"}}/> Stars</Heading>
+    <StyledNavbar>
+      <NavLink exact to="/profile" activeClassName="active" className="NavItem">
+        <IoBookSharp style={{ marginTop: "3px" }} /> OverView
+      </NavLink>
+      <NavLink to="/repositories" activeClassName="active" className="NavItem">
+        <BiRectangle style={{ marginTop: "3px" }} /> Repositories
+      </NavLink>
+      <NavLink to="/projects" activeClassName="active" className="NavItem">
+        <GoFileDirectory style={{ marginTop: "3px" }} /> Projects
+      </NavLink>
+      <NavLink to="/pakages" activeClassName="active" className="NavItem">
+        <AiFillCodeSandboxCircle style={{ marginTop: "3px" }} /> Packages
+      </NavLink>
+      <NavLink to="/stars" activeClassName="active" className="NavItem">
+        <AiFillStar style={{ marginTop: "3px" }} /> Stars
+      </NavLink>
       <hr />
-    </DIV>
-  )
-}
+    </StyledNavbar>
+  );
+};
 
-export default ProfilePageNavbar
+export default ProfilePageNavbar;
 
-const DIV = styled.div`
-display: flex;
-justify-content: space-around;
-gap: 20px;
-width: 50%;
-margin: auto;
+const StyledNavbar = styled.div`
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  width: 50%;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0;
 
-.Heading {
+  .NavItem {
     display: flex;
     flex-direction: row;
     gap: 9px;
-   font-size: 20px;
-   /* border: 1px solid red; */
-}
-.Heading:hover{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+  }
+
+  .NavItem:hover {
     text-decoration: underline;
-}
+  }
 
-`
-
-/**@souravsarkar1	souravsarkar1
-Overview
-Repositories
-35
-Projects
-Packages
-Stars
-1 */
+  .active {
+    font-weight: bold;
+  }
+`;

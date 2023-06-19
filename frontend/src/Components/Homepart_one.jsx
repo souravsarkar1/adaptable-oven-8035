@@ -130,7 +130,7 @@ const Homepart_one = () => {
                     {/* <Box border="1px solid white" h="500px">
                         <Text color='white'>For you</Text>
                     </Box> */}
-                    <Box w="50%">
+                    <Box w="90%" h="600px" >
                     <Homepart_two />
                     </Box>
                 </Box>

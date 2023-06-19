@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <Box>
       <Box position={'absolute'} display={'flex'} backgroundColor='#24292f' w="100%" h={'60px'}>
-        <HStack border='1px solid red' w={'25%'} ml={'2%'}>
+        <HStack  w={'25%'} ml={'2%'}>
           {/* <VStack> */}
           <Image borderRadius={'50%'} w="11%" h="30px" src="https://tse4.mm.bing.net/th?id=OIP.YdGdMlhgxeiiJ7kQ4bZ2GQHaFj&pid=Api&P=0&h=180"></Image>
           <InputGroup >
@@ -25,7 +25,7 @@ const Navbar = () => {
           </InputGroup>
         </HStack>
 
-        <HStack w={'26%'} border='1px solid red' display={'flex'} justifyContent={'space-between'} color={'#e6edf3'} ml={'20px'} fontSize={'12px'} fontWeight={'600'} fontFamily='apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji'>
+        <HStack w={'26%'} display={'flex'} justifyContent={'space-between'} color={'#e6edf3'} ml={'20px'} fontSize={'12px'} fontWeight={'600'} fontFamily='apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji'>
           <Text >Pull requests</Text>
           <Text>Issues</Text>
           <Text>Codespaces</Text>
@@ -33,7 +33,7 @@ const Navbar = () => {
           <Text>Explore</Text>
         </HStack>
 
-        <HStack w="50%" border="1px solid white" alignItems={'center'} justifyContent={'end'} mr="20px">
+        <HStack w="50%"  alignItems={'center'} justifyContent={'end'} mr="20px">
 
           <Text><BellIcon color={'white'} /></Text>
           {/* <Text><SmallAddIcon color={'white'} /></Text> */}
@@ -50,7 +50,8 @@ const Navbar = () => {
               <MenuItem bg='#1a202c'>New project</MenuItem>
             </MenuList>
           </Menu>
-          <Box w="17px" h="17px" borderRadius={'50%'} border="1px solid red"><Image borderRadius={'50%'}></Image></Box>
+          <Box w="17px" h="17px" borderRadius={'50%'} >
+            <Image src="https://avatars.githubusercontent.com/u/112754573?v=4" borderRadius={'50%'}></Image></Box>
 
           
             <Menu>

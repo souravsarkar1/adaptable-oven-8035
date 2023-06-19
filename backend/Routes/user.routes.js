@@ -47,7 +47,7 @@ userRoute.post('/login', async (req, res) => {
         bcrypt.compare(pass, user.pass, async (err, result) => {
             const token = jwt.sign({ userID : user._id , user : user.name }, process.env.secrate);
             if (result) {
-                res.status(200).json({ msg: "Login Successful!!", token: token , user : user.name, userID : user._id });
+                res.status(200).json({ msg: "Login Successful!!", token: token , userID : user._id , user : user.name });
             }
             else {
                 res.status(200).json({ msg: "Wrong Crendintial" });

@@ -26,7 +26,6 @@ const Login = () => {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res)
         setmsg(res.msg)
       })
       .catch((err) => {

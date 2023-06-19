@@ -1,7 +1,7 @@
 import axios from "axios";
 import { DELETE_PRODUCT_SUCCESS, Get_Product_sucess, PATCH_PRODUCT_SUCESS, Post_Product_sucess, Product_failure, Product_request } from "./actionType";
 
-export const URL = "http://localhost:8080/data"
+export const URL = "http://localhost:3000/data"
 export const addproduct =(newData)=> (dispatch)=>{
     dispatch({type:Product_request})
     axios.post(URL,newData).then((res)=>{
@@ -32,7 +32,7 @@ export const getproduct =(paramobj)=> (dispatch)=>{
 export const editproduct = (dataobj,id)=>(dispatch)=>{
     dispatch({type:Product_request})
 
-    return axios.patch(`http://localhost:8080/data/${id}`,dataobj).then(()=>{
+    return axios.patch(`http://localhost:3000/data/${id}`,dataobj).then(()=>{
         dispatch({type:PATCH_PRODUCT_SUCESS})
     })
     .catch(()=>{
@@ -45,7 +45,7 @@ export const editproduct = (dataobj,id)=>(dispatch)=>{
 export const deleteProduct = (id) => (dispatch) => {
     dispatch({type:Product_request})
     return axios
-      .delete(`http://localhost:8080/data/${id}`)
+      .delete(`http://localhost:3000/data/${id}`)
       .then((res) => {
         console.log(res.data);
         dispatch({ tpye: DELETE_PRODUCT_SUCCESS });

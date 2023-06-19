@@ -22,12 +22,22 @@ const navigate = useNavigate()
   console.log("working")
   navigate(`/edit/${id}`)
  }
+
+
    return (
-       
-    // <Center py={6}>
+    <div>
+   
     
+     
+     
+    
+      
+      
        
-      <Stack
+    <Center py={6}>
+       
+      <Stack gap={"20px"}
+      style={{background:"white"}}
         borderWidth="1px"
         borderRadius="lg"
         w={{ sm: '100%', md: '540px' }}
@@ -54,7 +64,7 @@ const navigate = useNavigate()
           alignItems="center"
           p={1}
           pt={2}>
-          <Heading fontSize={'2xl'} fontFamily={'body'}>
+          <Heading color={"black"} fontSize={'2xl'} fontFamily={'body'}>
             {username}
           </Heading>
           <Text fontWeight={600} color={'gray.500'} size="sm" mb={4}>
@@ -64,11 +74,11 @@ const navigate = useNavigate()
             textAlign={'center'}
             color={useColorModeValue('gray.700', 'gray.400')}
             px={3}>
-            Actress, musician, songwriter and artist. PM for work inquires or
+            welcome to gitlab.
             <Link href={'#'} color={'blue.400'}>
-              #tag
+              #CODE COMMIT REPEAT in Your Accounts
             </Link>
-            me in your posts
+              
           </Text>
           <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
             <Badge
@@ -76,21 +86,21 @@ const navigate = useNavigate()
               py={1}
               bg={useColorModeValue('gray.50', 'gray.800')}
               fontWeight={'400'}>
-              #art
+              #CODE
             </Badge>
             <Badge
               px={2}
               py={1}
               bg={useColorModeValue('gray.50', 'gray.800')}
               fontWeight={'400'}>
-              #photography
+              #COMMIT
             </Badge>
             <Badge
               px={2}
               py={1}
               bg={useColorModeValue('gray.50', 'gray.800')}
               fontWeight={'400'}>
-              #music
+              #REPEAT
             </Badge>
           </Stack>
           <Stack
@@ -105,8 +115,13 @@ const navigate = useNavigate()
               flex={1}
               fontSize={'sm'}
               rounded={'full'}
+              bg={"gray"}
               _focus={{
-                bg: 'gray.200',
+                bg: 'black.200',
+                color:"black"
+              }}
+              _hover={{
+                bg: 'black.500',
               }}>
               Delete
             </Button>
@@ -137,9 +152,32 @@ const navigate = useNavigate()
           </Stack>
         </Stack>
       </Stack>
-     
-    
+      </Center>
+     </div>
+
   )
 }
 
 export default AdminUserCard
+
+
+
+
+
+{/* 
+<Center>
+              <Avatar size="xl" src="https://bit.ly/sage-adebayo">
+                <AvatarBadge
+                  as={IconButton}
+                  size="sm"
+                  rounded="full"
+                  top="-10px"
+                  colorScheme="red"
+                  aria-label="remove Image"
+                  icon={<SmallCloseIcon />}
+                />
+              </Avatar>
+            </Center>
+            <Center w="full">
+              <Button w="full">Change Icon</Button>
+            </Center> */}

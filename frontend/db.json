@@ -1,16 +1,10 @@
 {
   "data": [
     {
-      "username": "Ankesh",
-      "email": "Ankesh@gmail.com",
-      "password": "Ankesh",
-      "id": 3
-    },
-    {
       "username": "Sakshi semwal",
-      "email": "ankesh9053@gmail.com",
-      "password": "pistol",
-      "id": 4
+      "email": "Sakshisemwal@gmail.com",
+      "password": "Sakshi",
+      "id": 5
     }
   ]
 }

@@ -9,6 +9,9 @@ import Packages from './ProfilePages/Pakages'
 import EditProfile from './ProfilePages/EditProfile'
 import Codeupload from './Codeupload'
 import SingleCode from './SingleCode'
+import Admin from './Admin'
+import EditAdminUser from './EditAdminUser'
+import Admingetuser from './Admingetuser'
 
 const Allroutes = () => {
   return (
@@ -24,6 +27,14 @@ const Allroutes = () => {
       <Route path='/code' element={<Codeupload/>}/>
       <Route path='/singlecode/:id' element={<SingleCode/>}/>
 
+
+      <Route path='/admin' element={<Admingetuser/>}/>
+
+
+      <Route path='/edit/:id' element={<EditAdminUser/>}/>
+
+
+      <Route path='/postuser' element={<Admin/>}/>
       </Routes>
     </div>
   )

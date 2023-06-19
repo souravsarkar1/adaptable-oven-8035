@@ -1,19 +1,24 @@
-const express = require('express');
 
-const { codeRouter } = require('./Routes/Code.routes');
-const { auth } = require('./MiddleWare/authMiddleWare');
-const cors = require("cors");
-const { userRoute } = require('./Routes/user.routes');
+const { connection } = require("./db")
 
-require('dotenv').config();
-const app = express();
-app.use(express.json());
+
+
+const cors=require("cors")
+require("dotenv").config()
+const express=require("express")
+const { userRouter } = require("./Routes/user.route")
+const { repoRouter } = require("./Routes/repo.create")
+
+
+const app= express()
 app.use(cors())
+app.use(express.json())
+app.use("/users",userRouter)
+app.use("/create",repoRouter)
 
-app.use('/users', userRoute);
-app.use("/code",auth, codeRouter);
 
-app.listen(process.env.port, async () => {
+
+app.listen(process.env.port,async()=>{
     try {
         await connection;
         console.log(`port is running at ${process.env.port}`);

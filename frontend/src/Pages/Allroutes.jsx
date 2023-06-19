@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Route, Routes } from 'react-router-dom'
 import Home from './Home'
 
@@ -10,9 +11,10 @@ import EditProfile from './ProfilePages/EditProfile'
 import Codeupload from './Codeupload'
 
 import Admin from './Admin'
+import SingleCode from './SingleCode'
 
 
-const Allroutes = () => {
+const AllRoutes = () => {
   return (
     <div>
       <Routes>
@@ -38,6 +40,6 @@ const Allroutes = () => {
       </Routes>
     </div>
   )
-}
+  }
 
-export default Allroutes
+export default AllRoutes

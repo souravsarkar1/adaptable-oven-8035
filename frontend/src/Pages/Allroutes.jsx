@@ -12,13 +12,15 @@ import Codeupload from './Codeupload'
 
 import Admin from './Admin'
 import SingleCode from './SingleCode'
+import Admin from './Admin'
+import EditAdminUser from './EditAdminUser'
+import Admingetuser from './Admingetuser'
 
 
 const AllRoutes = () => {
   return (
     <div>
       <Routes>
-
       <Route path='/' element={<Home/>}/>
 
       <Route path='/profile' element={<ProfilePage/>}/>
@@ -30,13 +32,13 @@ const AllRoutes = () => {
       <Route path='/singlecode/:id' element={<SingleCode/>}/>
 
 
-        <Route path='/profile' element={<ProfilePage />} />
-        <Route path='/repositories' element={<Repogistries />} />
-        <Route path='/projects' element={<Projects />} />
-        <Route path='/pakages' element={<Packages />} />
-        <Route path='/editprofile' element={<EditProfile />} />
-        <Route path='/code' element={<Codeupload />} />
-        <Route path='/admin' element={<Admin />} />
+      <Route path='/admin' element={<Admingetuser/>}/>
+
+
+      <Route path='/edit/:id' element={<EditAdminUser/>}/>
+
+
+      <Route path='/postuser' element={<Admin/>}/>
       </Routes>
     </div>
   )

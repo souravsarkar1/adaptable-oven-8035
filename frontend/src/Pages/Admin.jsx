@@ -62,31 +62,37 @@ export default function Admin() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+   
+
+  
+    <form  onSubmit={handleSubmit} style={{paddingTop:"2rem"}}>
+       
       <Flex
         minH={'100vh'}
         align={'center'}
         justify={'center'}
         bg={useColorModeValue('gray.50', 'gray.800')}
       >
+        
         <Stack
           spacing={4}
           w={'full'}
           maxW={'md'}
-          bg={useColorModeValue('white', 'gray.700')}
+          bg={useColorModeValue('white', 'white.700')}
           rounded={'xl'}
           boxShadow={'lg'}
+          background={"gray.200"}
           p={6}
           my={12}
         >
-          <Heading lineHeight={1.1} fontSize={{ base: '2xl', sm: '3xl' }}>
-            User Profile Edit
+          <Heading lineHeight={1.1} color={"black"} fontSize={{ base: '2xl', sm: '3xl' }}>
+            Add Users here
           </Heading>
           <FormControl id="userName">
-            <FormLabel>User Icon</FormLabel>
+            <FormLabel color={"black"}>User Description</FormLabel>
             <Stack direction={['column', 'row']} spacing={6}>
               <Center>
-                <Avatar size="xl" src="https://bit.ly/sage-adebayo">
+                <Avatar size="xl" src="https://images.unsplash.com/photo-1520810627419-35e362c5dc07?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ">
                   <AvatarBadge
                     as={IconButton}
                     size="sm"
@@ -99,39 +105,45 @@ export default function Admin() {
                 </Avatar>
               </Center>
               <Center w="full">
-                <Button w="full">Change Icon</Button>
+                <Button w="full" bg={"black"}>Change Icon</Button>
               </Center>
             </Stack>
           </FormControl>
           <FormControl id="userName" isRequired>
-            <FormLabel>User name</FormLabel>
+            <FormLabel color={"black"}>User name</FormLabel>
             <Input
               placeholder="UserName"
+              border={"1px solid black"}
               _placeholder={{ color: 'gray.500' }}
               type="text"
               value={data.username}
               name="username"
+              color={"black"}
               onChange={handleChange}
             />
           </FormControl>
-          <FormControl id="email" isRequired>
-            <FormLabel>Email address</FormLabel>
+          <FormControl color={"black"} id="email" isRequired>
+            <FormLabel color={"black"}>Email address</FormLabel>
             <Input
+            border={"1px solid black"}
               placeholder="your-email@example.com"
               _placeholder={{ color: 'gray.500' }}
               type="email"
+              color={"black"}
               value={data.email}
               name="email"
               onChange={handleChange}
             />
           </FormControl>
           <FormControl id="password" isRequired>
-            <FormLabel>Password</FormLabel>
+            <FormLabel color={"black"}>Password</FormLabel>
             <Input
+            border={"1px solid black"}
               placeholder="password"
               _placeholder={{ color: 'gray.500' }}
               type="password"
               name="password"
+              color={"black"}
               value={data.password}
               onChange={handleChange}
             />
@@ -159,9 +171,14 @@ export default function Admin() {
             >
               Submit
             </Button>
+
           </Stack>
+        
         </Stack>
+        
       </Flex>
+     
     </form>
+    
   );
 }

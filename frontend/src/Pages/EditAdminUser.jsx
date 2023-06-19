@@ -65,19 +65,20 @@ const EditAdminUser = () => {
             w={'full'}
             maxW={'md'}
             bg={useColorModeValue('white', 'gray.700')}
+            background={"gray.200"}
             rounded={'xl'}
             boxShadow={'lg'}
             p={6}
             my={12}
           >
-            <Heading lineHeight={1.1} fontSize={{ base: '2xl', sm: '3xl' }}>
+            <Heading lineHeight={1.1} color={"black"} fontSize={{ base: '2xl', sm: '3xl' }}>
               User Profile Edit
             </Heading>
             <FormControl id="userName">
-              <FormLabel>User Icon</FormLabel>
+              <FormLabel color={"black"}>User Icon</FormLabel>
               <Stack direction={['column', 'row']} spacing={6}>
                 <Center>
-                  <Avatar size="xl" src="https://bit.ly/sage-adebayo">
+                  <Avatar size="xl" src="https://images.unsplash.com/photo-1520810627419-35e362c5dc07?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ">
                     <AvatarBadge
                       as={IconButton}
                       size="sm"
@@ -90,13 +91,15 @@ const EditAdminUser = () => {
                   </Avatar>
                 </Center>
                 <Center w="full">
-                  <Button w="full">Change Icon</Button>
+                  <Button bg={"black"} w="full">Change Icon</Button>
                 </Center>
               </Stack>
             </FormControl>
             <FormControl id="userName" isRequired>
-              <FormLabel>User name</FormLabel>
+              <FormLabel color={"black"}>User name</FormLabel>
               <Input
+              border={"1px solid black"}
+               color={"black"}
                 placeholder="UserName"
                 _placeholder={{ color: 'gray.500' }}
                 type="text"
@@ -106,8 +109,10 @@ const EditAdminUser = () => {
               />
             </FormControl>
             <FormControl id="email" isRequired>
-              <FormLabel>Email address</FormLabel>
+              <FormLabel color={"black"}>Email address</FormLabel>
               <Input
+              border={"1px solid black"}
+              color={"black"}
                 placeholder="your-email@example.com"
                 _placeholder={{ color: 'gray.500' }}
                 type="email"
@@ -117,8 +122,10 @@ const EditAdminUser = () => {
               />
             </FormControl>
             <FormControl id="password" isRequired>
-              <FormLabel>Password</FormLabel>
+              <FormLabel color={"black"}>Password</FormLabel>
               <Input
+              border={"1px solid black"}
+              color={"black"}
                 placeholder="password"
                 _placeholder={{ color: 'gray.500' }}
                 type="password"

@@ -1,18 +1,22 @@
-import { Routes,Route } from 'react-router-dom';
 import './App.css';
-
 import Navbar from './Components/Navbar';
 
-import { Box } from '@chakra-ui/react';
-import AllRoutes from './Pages/Allroutes';
+// import Admingetuser from './Pages/Admingetuser';
+import Allroutes from './Pages/Allroutes';
 
 function App() {
   return (
-    <Box className="App">
+    <div className="App">
+     {/* <Navbar/>
+     <Allroutes/>
+     <Footer/> */}
+     {/* <Admingetuser/> */}
      <Navbar/>
-    <AllRoutes/>
-    </Box>
+     <Allroutes/>
+    </div>
   );
 }
+
+
 
 export default App;

@@ -2,6 +2,7 @@
 const { connection } = require("./db")
 
 
+
 const cors=require("cors")
 require("dotenv").config()
 const express=require("express")
@@ -19,10 +20,11 @@ app.use("/create",repoRouter)
 
 app.listen(process.env.port,async()=>{
     try {
-        await connection
-        console.log(`server is running at port ${process.env.port}`)
-        console.log("connected to the db")
+        await connection;
+        console.log(`port is running at ${process.env.port}`);
+        console.log("connected to db");
     } catch (error) {
-        console.log(error)
+        console.log(error.message);
+        console.log("Sometthing went to wrong");
     }
 })
